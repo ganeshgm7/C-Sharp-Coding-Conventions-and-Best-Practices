@@ -37,3 +37,77 @@
 - **Database Calls:** Avoid database calls inside for/foreach loops.
 - **KISS & DRY Principles:** Follow the KISS (Keep It Simple Stupid) and DRY (Don't Repeat Yourself) principles.
 - **XML Comments:** Use XML comments to document classes, methods, and properties.
+
+  
+````csharp
+namespace Amaze.Api.Customer;
+
+/// <summary>
+/// A class representing a customer with Customer ID, name, address, date of birth, and status.
+/// </summary>
+public class Customer
+{
+    /// <summary>
+    /// Gets or sets the Customer ID.
+    /// </summary>
+    public int CustomerId { get; set; }
+
+    /// <summary>
+    /// Gets or sets the Name of the customer.
+    /// </summary>
+    public string Name { get; set; }
+
+    /// <summary>
+    /// Gets or sets the Date of Birth of the customer.
+    /// </summary>
+    public DateTime DateOfBirth { get; set; }
+
+    /// <summary>
+    /// Gets or sets the Status of the customer.
+    /// </summary>
+    public CustomerStatus Status { get; set; }
+}
+
+/// <summary>
+/// Enumeration representing the status of a customer.
+/// </summary>
+public enum CustomerStatus
+{
+    Active,
+    Inactive,
+    Suspended
+}
+
+/// <summary>
+/// A class providing methods to handle customer data.
+/// </summary>
+public class CustomerRepository
+{
+    private readonly List<Customer> _customers;
+
+    private const int MAX_CUSTOMERS = 1000;
+
+    public readonly int MaximumAgeLimit = 58;
+
+    public CustomerRepository()
+    {
+        _customers = [];
+    }
+
+    /// <summary>
+    /// Adds a new customer to the repository.
+    /// </summary>
+    /// <param name="customer">The customer to add.</param>
+    /// <returns>Added customer ID</returns>
+    public int AddCustomer(Customer customer)
+    {
+        if (_customers.Count >= MAX_CUSTOMERS)
+        {
+            throw new InvalidOperationException("Customer repository is full.");
+        }
+        _customers.Add(customer);
+
+        return customer.CustomerId;
+    }
+}
+````
