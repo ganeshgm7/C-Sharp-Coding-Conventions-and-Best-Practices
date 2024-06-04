@@ -38,6 +38,7 @@
 - **KISS & DRY Principles:** Follow the KISS (Keep It Simple Stupid) and DRY (Don't Repeat Yourself) principles.
 - **XML Comments:** Use XML comments to document classes, methods, and properties.
 
+## Sample Code
   
 ````csharp
 namespace Amaze.Api.Customer;
