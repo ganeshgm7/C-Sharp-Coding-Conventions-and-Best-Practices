@@ -8,19 +8,23 @@
 
 ### Specific Naming Guidelines
 
-| Element            | Case               |
-|--------------------|--------------------|
-| Class name         | PascalCase         |
-| Namespace name     | PascalCase         |
-| Constructor name   | PascalCase         |
-| Method name        | PascalCase         |
-| Properties name    | PascalCase         |
-| Enum name          | PascalCase         |
-| Field name (Public)| PascalCase         |
-| Field name (Private)| camelCase         |
-| Method arguments   | camelCase          |
-| Local variables    | camelCase          |
-| Constant name      | UPPER_SNAKE_CASE   |
+<div align="center">
+
+|          Element          |        Case         |
+|--------------------------|---------------------|
+|       Class name         |     PascalCase      |
+|     Namespace name       |     PascalCase      |
+|    Constructor name      |     PascalCase      |
+|       Method name        |     PascalCase      |
+|     Properties name      |     PascalCase      |
+|         Enum name        |     PascalCase      |
+|  Field name (Public)     |     PascalCase      |
+| Field name (Private)     |     camelCase       |
+|     Method arguments     |     camelCase       |
+|      Local variables     |     camelCase       |
+|       Constant name      | UPPER_SNAKE_CASE    |
+
+</div>
 
 ## General Guidelines
 
